@@ -5,9 +5,9 @@
 }
 
 body {
+  overflow: hidden;
   font-family: "Instrument Sans";
   display: flex;
-  overflow: hidden;
   background-image: url("img/background.jpg");
   background-size: cover;
   flex-direction: column;
