@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    background: url('Rectangle 40.png') center center / cover no-repeat, #0a1628;
+    background: url('https://i.ibb.co/1fX61Btg/Rectangle-40.png') center center / cover no-repeat, #0a1628;
     color: #fff;
     min-height: 100vh;
     position: relative;
@@ -123,9 +123,26 @@ body {
     color: #fff;
 }
 .register-btn {
-    border-color: #01d6ff;
-    color: #01d6ff;
+  font-family: 'Instrument Sans', 'Segoe UI', Roboto, Arial, sans-serif;
+    background: linear-gradient(90deg, #01d6ff 0%, #01b2ff 100%);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 2px 20px 0 #01d6ff3a;
+    transition: background .19s, box-shadow .16s, filter .18s, transform .18s;
+    filter: brightness(1);
 }
+.register-btn:hover, .register-btn:focus {
+    background: linear-gradient(90deg, #01c6ff 0%, #0197ff 100%);
+    box-shadow: 0 4px 32px 2px #01d6ff54;
+    filter: brightness(1.15) saturate(1.25);
+    color: #fff;
+    transform: translateY(-1.5px) scale(1.04);
+}
+.register-btn:active {
+    filter: brightness(0.92);
+}
+
 .knowmore-btn {
     border-color: #fff;
     color: #fff;
@@ -134,7 +151,6 @@ body {
 .knowmore-btn:focus {
     background: #fff;
     color: #0180ff;
-    border-color: #01d6ff;
 }
 /* Coming Soon Label */
 .coming-soon-label {
@@ -221,24 +237,28 @@ body {
     gap: 8px;
     padding-bottom: 12px;
   }
-  .event-card {
-    min-width: 85vw;
-    max-width: 90vw;
-    padding: 8px 6px 10px;
-    border-radius: 9px;
-    font-size: 12px;
-  }
-  .card-image-wrapper {
-    border-radius: 6px;
-    margin-bottom: 6px;
-  }
-  .card-title {
-    font-size: 11px;
-  }
-  .card-btn-group {
-    gap: 6px;
-    margin-top: 7px;
-  }
+.event-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 270px;
+}
+
+.card-image-wrapper {
+  flex: 0 0 auto;
+}
+
+.card-title {
+  margin-bottom: auto; /* Pushes everything after to the bottom */
+}
+
+.card-btn-group {
+  margin-top: 14px;
+  margin-bottom: 0;
+  align-items: flex-end;
+}
+
   .card-btn {
     font-size: 10px;
     padding: 4px 8px;
