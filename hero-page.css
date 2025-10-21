@@ -36,36 +36,6 @@ body {
   background: radial-gradient(#373def, #05449600 70%);
 }
 
-#navContainer {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  padding: 1rem;
-}
-#navbar {
-  border: #fff 0.05rem solid;
-  border-radius: 5rem;
-  display: flex;
-  height: 3rem;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-}
-
-#navbar > #links {
-  display: flex;
-  gap: 1rem;
-}
-
-#links > a {
-  text-decoration: none;
-  color: white;
-  border: #fff 0.05rem solid;
-  border-radius: 5rem;
-  padding: 0.2rem 1rem;
-}
-
 .pageContainer {
   display: flex;
   flex-direction: column;
