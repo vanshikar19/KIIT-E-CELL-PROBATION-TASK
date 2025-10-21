@@ -99,6 +99,7 @@ body {
 .questions > div > div > p {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.15;
+  font-style: italic;
   text-align: justify;
   display: none;
   overflow: hidden;
@@ -164,4 +165,5 @@ body {
   .questions > div > div > div > h3 {
     font-size: 1.25rem;
   }
+
 }
