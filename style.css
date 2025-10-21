@@ -265,8 +265,8 @@ body {
     border-radius: 5px;
   }
   .navigation-arrows {
-    right: 7px!important;
-    bottom: 12px!important;
+    right: 7px;
+    bottom: 12px;
     gap: 7px;
   }
   .arrow-btn {
