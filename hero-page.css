@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  overflow: hidden;
+  font-family: "Instrument Sans";
+  display: flex;
+  background-image: url("img/background.jpg");
+  background-size: cover;
+  flex-direction: column;
+  color: #fff;
+}
+
+#first {
+  gap: 1rem;
+}
+
+.blue-text {
+  color: #95e3f9;
+}
+#header {
+  text-align: center;
+  font-size: 10rem;
+}
+
+#shadow {
+  position: absolute;
+  left: -50vh;
+  width: 100vh;
+  height: 100vh;
+  z-index: 10000;
+  display: flex;
+  opacity: 50%;
+  background: radial-gradient(#373def, #05449600 70%);
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+#earth {
+  z-index: -100;
+  width: auto;
+  height: 60%;
+  position: absolute;
+  bottom: -10rem;
+}
+
+#CourseButton {
+  background: linear-gradient(to right, #6164ac, #04075d);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-family: "Instrument Sans";
+  border-radius: 0.5rem;
+  color: white;
+}
+@media (width <= 700px) {
+  #earth {
+    right: -50%;
+  }
+}
