@@ -8,9 +8,7 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #333;
-}
+/* Body styles removed to avoid conflicts */
 
 #navContainer {
   font-family: "Instrument Sans";

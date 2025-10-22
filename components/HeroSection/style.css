@@ -4,17 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  text-align: center;
-  overflow: hidden;
-  font-family: "Instrument Sans";
-  display: flex;
-  background-image: url("img/background.jpg");
-  background-size: cover;
-  flex-direction: column;
-  color: #fff;
-}
-
 #first {
   gap: 1rem;
 }
@@ -64,5 +53,32 @@ body {
 @media (width <= 700px) {
   #earth {
     right: -50%;
+  }
+
+  #header {
+    font-size: 4rem;
+  }
+
+  .pageContainer {
+    padding: 2rem 1rem;
+  }
+
+  #CourseButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (width <= 480px) {
+  #header {
+    font-size: 3rem;
+  }
+
+  .pageContainer {
+    padding: 1rem 0.5rem;
+  }
+
+  #first {
+    gap: 0.5rem;
   }
 }

@@ -1,189 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Page</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Irish+Grover&display=swap"
-    rel="stylesheet"
-  />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Instrument Sans', Arial, sans-serif;
-    }
-
-    /* Navbar styles */
-    #navContainer {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      padding: 1rem;
-    }
-    
-    #navbar {
-      border: #fff 0.05rem solid;
-      border-radius: 5rem;
-      display: flex;
-      height: 3rem;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem;
-      background-color: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(10px);
-    }
-    
-    #navbar > a:first-child {
-      font-family: 'Irish Grover', cursive;
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
-    }
-    
-    #navbar > #links {
-      display: flex;
-      gap: 1rem;
-    }
-    
-    #links > a {
-      text-decoration: none;
-      color: white;
-      border: #fff 0.05rem solid;
-      border-radius: 5rem;
-      padding: 0.2rem 1rem;
-      transition: background-color 0.3s, color 0.3s;
-      cursor: pointer;
-    }
-
-    #links > a:hover {
-      background-color: white;
-      color: #333;
-    }
-
-    /* Section styles */
-    section {
-      min-height: 100vh;
-      padding: 80px 20px 20px;
-      scroll-margin-top: 80px;
-    }
-
-    section:nth-child(even) {
-      background-color: #f5f5f5;
-    }
-
-    .loading {
-      text-align: center;
-      padding: 2rem;
-      color: #666;
-    }
-  </style>
-</head>
-<body>
-  <div id="navContainer">
-    <div id="navbar">
-      <a style="font-family: 'Irish Grover'">Build School</a>
-      <div id="links">
-        <a href="#home">Programs</a>
-        <a href="#about">About</a>
-        <a href="#sessions">Sessions</a>
-        <a href="#speakers">Speakers</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </div>
-
-  <section id="home">
-    <div class="loading">Loading...</div>
-  </section>
-
-  <section id="about">
-    <div class="loading">Loading...</div>
-  </section>
-
-  <section id="sessions">
-    <div class="loading">Loading...</div>
-  </section>
-
-  <section id="speakers">
-    <div class="loading">Loading...</div>
-  </section>
-
-  <section id="testimonials">
-    <div class="loading">Loading...</div>
-  </section>
-
-  <section id="faq">
-    <div class="loading">Loading...</div>
-  </section>
-
-  <section id="contact">
-    <div class="loading">Loading...</div>
-  </section>
-
-  <script>
-    // Map sections to their HTML files
-    const sections = {
-      'home': 'components/HeroSection/HeroSection.html',
-      'about': 'components/AboutUs/AboutUs.html',
-      'sessions': 'components/Sessions/Sessions.html',
-      'speakers': 'components/Speakers/Speakers.html',
-      'testimonials': 'components/Testimonials/Testimonials.html',
-      'faq': 'components/Faq/Faq.html',
-      'contact': 'components/Footer/Footer.html'
-    };
-
-    // Load each component
-    Object.keys(sections).forEach(sectionId => {
-      fetch(sections[sectionId])
-        .then(response => response.text())
-        .then(html => {
-          // Extract body content if the HTML file has full structure
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, 'text/html');
-          const content = doc.body.innerHTML || html;
-          
-          document.getElementById(sectionId).innerHTML = content;
-          
-          // Execute any scripts in the loaded content
-          const scripts = doc.body.querySelectorAll('script');
-          scripts.forEach(script => {
-            const newScript = document.createElement('script');
-            if (script.src) {
-              newScript.src = script.src;
-            } else {
-              newScript.textContent = script.textContent;
-            }
-            document.getElementById(sectionId).appendChild(newScript);
-          });
-        })
-        .catch(error => {
-          console.error(`Error loading ${sectionId}:`, error);
-          document.getElementById(sectionId).innerHTML = '<p style="text-align:center; color:red;">Failed to load content</p>';
-        });
-    });
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('#links a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build School - KIIT E-Cell</title>
+    <meta
+      name="description"
+      content="Build School is a tech education program focused on practical, project-based learning in software development."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Jersey+15&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="global.css" />
+    <script src="loader.js"></script>
+  </head>
+  <body></body>
 </html>
