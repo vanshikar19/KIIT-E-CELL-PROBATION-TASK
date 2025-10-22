@@ -9,15 +9,6 @@ async function loadComponent(url) {
     link.href = url + "/style.css";
     document.head.appendChild(link);
     try {
-      const additionalResponse = await fetch(url + "/additional.css");
-      if (additionalResponse.ok) {
-        const additionalLink = document.createElement("link");
-        additionalLink.rel = "stylesheet";
-        additionalLink.href = url + "/additional.css";
-        document.head.appendChild(additionalLink);
-      }
-    } catch (error) {}
-    try {
       const scriptResponse = await fetch(url + "/script.js");
       if (scriptResponse.ok) {
         const script = document.createElement("script");
