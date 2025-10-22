@@ -45,6 +45,7 @@ hr {
   vertical-align: middle;
   margin-right: 8px;
 }
+<<<<<<<< HEAD:style.css
 .icon {
   filter: brightness(100) invert(1);
 }
@@ -86,4 +87,19 @@ hr {
   .footer-column p {
     font-size: 0.75rem;
   }
+========
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
+}
+a {
+  text-decoration: none; 
+  color: inherit; 
+  cursor: default; 
+>>>>>>>> c9a3ece9559db6672e67f8f94c08aae906a37070:style1.css
 }
