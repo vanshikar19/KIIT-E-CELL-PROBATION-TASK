@@ -25,7 +25,7 @@ body {
   color: white;
   margin-bottom: 25px;
   text-shadow: 0 0 6px rgba(0,0,0,0.4);
-  font-family: "Jersey 15", sans-serif; /* 👈 Added this line */
+  font-family: "Jersey 15", sans-serif; 
 }
 
 label {
