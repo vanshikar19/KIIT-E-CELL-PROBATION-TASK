@@ -56,3 +56,16 @@ hr {
 .icon {
   filter: brightness(100) invert(1)
 }
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
+}
+a {
+  text-decoration: none; 
+  color: inherit; 
+  cursor: default; 
+}
