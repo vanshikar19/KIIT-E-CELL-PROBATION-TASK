@@ -1,10 +1,19 @@
+#menu {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  background: #333;
+}
+
 #navContainer {
+  font-family: "Instrument Sans";
   position: absolute;
   width: 100%;
   top: 0;
@@ -21,8 +30,9 @@
   padding: 1rem;
 }
 
-#navbar > #links {
+#links {
   display: flex;
+  scale: 1 !important;
   gap: 1rem;
 }
 
@@ -32,4 +42,41 @@
   border: #fff 0.05rem solid;
   border-radius: 5rem;
   padding: 0.2rem 1rem;
+}
+
+@media (width <= 700px) {
+  #menu {
+    display: block;
+  }
+  #links > a {
+    transition: 1s;
+    opacity: 0;
+  }
+  #links > a:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  #links > a:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  #links > a:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  #links > a:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+  #links > a:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+  #links.opened > a {
+    opacity: 1;
+  }
+  #links {
+    scale: 0;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-self: end;
+    position: absolute;
+    right: 1rem;
+    top: 5rem;
+  }
 }

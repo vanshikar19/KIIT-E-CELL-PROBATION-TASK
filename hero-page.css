@@ -5,6 +5,7 @@
 }
 
 body {
+  text-align: center;
   overflow: hidden;
   font-family: "Instrument Sans";
   display: flex;
@@ -22,6 +23,7 @@ body {
   color: #95e3f9;
 }
 #header {
+  text-align: center;
   font-size: 10rem;
 }
 
@@ -45,11 +47,12 @@ body {
 }
 #earth {
   z-index: -100;
-  width: 100vw;
-  height: 100vh;
+  width: auto;
+  height: 60%;
   position: absolute;
   bottom: -10rem;
 }
+
 #CourseButton {
   background: linear-gradient(to right, #6164ac, #04075d);
   border: none;
@@ -57,4 +60,9 @@ body {
   font-family: "Instrument Sans";
   border-radius: 0.5rem;
   color: white;
+}
+@media (width <= 700px) {
+  #earth {
+    right: -50%;
+  }
 }
