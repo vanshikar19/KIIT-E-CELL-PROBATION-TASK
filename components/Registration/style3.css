@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: url('https://ik.imagekit.io/casyqt2cx/63a41f50beb7a99b0d9c55bdbca63c90b0b68c09%20(1).jpg?updatedAt=1761121129093') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.form-box {
+   background: linear-gradient(180deg, #9fd3ff, #7f8ec7);
+   padding: 35px 40px;
+   border-radius: 30px;
+   width: 360px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+   overflow-x: hidden;
+}
+
+.form-box h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 25px;
+  text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  font-family: "Jersey 15", sans-serif; 
+}
+
+label {
+  color: white;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  outline: 2px solid #1e2aff;
+}
+
+.radio-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.radio-row label {
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  background: linear-gradient(90deg, #6b73ff, #0004ff);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #0004ff, #6b73ff);
+}
