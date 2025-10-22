@@ -53,9 +53,7 @@ hr {
   vertical-align: middle;
   margin-right: 8px;
 }
-.icon {
-  filter: brightness(100) invert(1)
-}
+
 a:link,
 a:visited,
 a:hover,
