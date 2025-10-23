@@ -28,10 +28,11 @@ async function loadAllComponents() {
     "Navbar",
     "HeroSection",
     "Sessions",
+    "AboutUs",
     "Speakers",
     "Testimonials",
     "Faq",
-    "Registration",
+    //"Registration",
     "Footer",
   ];
 
